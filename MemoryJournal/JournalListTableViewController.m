@@ -10,7 +10,9 @@
 #import "JournalListTableViewCell.h"
 #import "AddPostViewController.h"
 
-#define ADDPOST_VIEW_CONTROLLER_SEGUE @"AddPostViewController"
+#define ADDPOST_VIEW_CONTROLLER @"AddPostViewController"
+#define CELL_IDENTIFIER @"JournalListCell"
+#define MAIN_STORYBOARD @"Main"
 
 @interface JournalListTableViewController ()
 
@@ -30,22 +32,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:ADDPOST_VIEW_CONTROLLER_SEGUE]) {
-        AddPostViewController *apViewController = segue.destinationViewController;
-        [self showViewController:apViewController sender:nil];
-        
-    }
-    
-    
-    
-}
-
-
 # pragma mark - IBActions -
 
 - (IBAction)addPostButtonTapped:(UIBarButtonItem *)sender {
-    [self performSegueWithIdentifier:ADDPOST_VIEW_CONTROLLER_SEGUE sender:nil];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:MAIN_STORYBOARD bundle:nil];
+    AddPostViewController *apViewController = [storyboard instantiateViewControllerWithIdentifier:ADDPOST_VIEW_CONTROLLER];
+    [self presentViewController:apViewController animated:YES completion:nil];
+    
 }
 
 #pragma mark - Table view data source
@@ -60,7 +54,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    JournalListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    JournalListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
     
     // Configure the cell...
     

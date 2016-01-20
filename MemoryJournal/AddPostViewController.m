@@ -36,7 +36,7 @@
 - (IBAction)doneButtonTapped:(UIButton *)sender {
 }
 
-- (IBAction)cancelButtonTapped:(UIBarButtonItem *)sender {
+- (IBAction)cancelButtonTapped:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
