@@ -11,11 +11,6 @@
 
 @interface ColorManager : NSObject
 
-// Home Page Color
-+ (UIColor *)homeCheckInButtonBackGroundColor;
-+ (UIColor *)homeCheckInButtonBorderColor;
-+ (UIColor *)homeCheckInButtonTextColor;
-
 // Add Post
 + (UIColor *)addPostDoneButtonTextColor;
 + (UIColor *)addPostDoneButtonBackgroundColor;

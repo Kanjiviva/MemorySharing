@@ -14,7 +14,7 @@
 		AAB90F5B1C49978400041E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAB90F5A1C49978400041E70 /* Assets.xcassets */; };
 		AAB90F5E1C49978400041E70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB90F5C1C49978400041E70 /* LaunchScreen.storyboard */; };
 		AAB90F691C49978400041E70 /* MemoryJournalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB90F681C49978400041E70 /* MemoryJournalTests.m */; };
-		AAB90F7B1C49BE2300041E70 /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB90F7A1C49BE2300041E70 /* CheckInViewController.m */; };
+		AAB90F7B1C49BE2300041E70 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB90F7A1C49BE2300041E70 /* HomeViewController.m */; };
 		AAB90F7F1C49BEBD00041E70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB90F7E1C49BEBD00041E70 /* MapKit.framework */; };
 		AAB90F811C49BEE200041E70 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB90F801C49BEE200041E70 /* CoreLocation.framework */; };
 		AAB90F891C49C79700041E70 /* ColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB90F881C49C79700041E70 /* ColorManager.m */; };
@@ -52,8 +52,8 @@
 		AAB90F641C49978400041E70 /* MemoryJournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryJournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB90F681C49978400041E70 /* MemoryJournalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryJournalTests.m; sourceTree = "<group>"; };
 		AAB90F6A1C49978400041E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAB90F791C49BE2300041E70 /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
-		AAB90F7A1C49BE2300041E70 /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
+		AAB90F791C49BE2300041E70 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		AAB90F7A1C49BE2300041E70 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		AAB90F7E1C49BEBD00041E70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AAB90F801C49BEE200041E70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AAB90F871C49C79700041E70 /* ColorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorManager.h; sourceTree = "<group>"; };
@@ -204,8 +204,8 @@
 		AAB90F971C4AE7FB00041E70 /* MemoryViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AAB90F791C49BE2300041E70 /* CheckInViewController.h */,
-				AAB90F7A1C49BE2300041E70 /* CheckInViewController.m */,
+				AAB90F791C49BE2300041E70 /* HomeViewController.h */,
+				AAB90F7A1C49BE2300041E70 /* HomeViewController.m */,
 				AAB90F9F1C4B2C0000041E70 /* JournalListTableViewController.h */,
 				AAB90FA01C4B2C0000041E70 /* JournalListTableViewController.m */,
 				AAB90FA61C4B310C00041E70 /* AddPostViewController.h */,
@@ -407,7 +407,7 @@
 				AAB90FA81C4B310C00041E70 /* AddPostViewController.m in Sources */,
 				AAB90F531C49978400041E70 /* AppDelegate.m in Sources */,
 				AAB90F8C1C49C7A100041E70 /* FontManager.m in Sources */,
-				AAB90F7B1C49BE2300041E70 /* CheckInViewController.m in Sources */,
+				AAB90F7B1C49BE2300041E70 /* HomeViewController.m in Sources */,
 				AAB90F501C49978400041E70 /* main.m in Sources */,
 				AAB90F891C49C79700041E70 /* ColorManager.m in Sources */,
 				AAB90FA11C4B2C0000041E70 /* JournalListTableViewController.m in Sources */,

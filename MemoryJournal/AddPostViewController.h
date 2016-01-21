@@ -10,4 +10,6 @@
 
 @interface AddPostViewController : UIViewController
 
+@property (strong, nonatomic) UIImage *selectedImage;
+
 @end

@@ -10,18 +10,6 @@
 
 @implementation ColorManager
 
-+ (UIColor *)homeCheckInButtonBackGroundColor {
-    return [UIColor blackColor];
-}
-
-+ (UIColor *)homeCheckInButtonBorderColor {
-    return [UIColor blueColor];
-}
-
-+ (UIColor *)homeCheckInButtonTextColor {
-    return [UIColor whiteColor];
-}
-
 + (UIColor *)addPostDoneButtonTextColor {
     return [UIColor whiteColor];
 }

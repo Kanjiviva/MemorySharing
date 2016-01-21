@@ -6,10 +6,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Check In View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="nOG-ZQ-HEe">
             <objects>
-                <viewController id="mcO-01-cK3" customClass="CheckInViewController" sceneMemberID="viewController">
+                <viewController id="mcO-01-cK3" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z4v-lM-Fbi"/>
                         <viewControllerLayoutGuide type="bottom" id="GvP-55-jzu"/>
@@ -18,25 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="av6-hw-kcI">
-                                <rect key="frame" x="175" y="115" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="7lz-Tj-4YS"/>
-                                    <constraint firstAttribute="height" constant="250" id="ALr-7f-hD9"/>
-                                </constraints>
-                                <state key="normal" title="Check In"/>
-                                <connections>
-                                    <action selector="checkInButtonTapped:" destination="mcO-01-cK3" eventType="touchUpInside" id="EYc-nZ-ou4"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztx-zr-yAz">
-                                <rect key="frame" x="290" y="373" width="19" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Album" translatesAutoresizingMaskIntoConstraints="NO" id="ash-hr-nsI">
-                                <rect key="frame" x="250" y="401" width="100" height="100"/>
+                                <rect key="frame" x="250" y="325" width="100" height="100"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="a9Z-1r-nU6"/>
@@ -46,33 +29,39 @@
                                     <outletCollection property="gestureRecognizers" destination="Jvx-aA-3SG" appends="YES" id="BRy-dC-KKA"/>
                                 </connections>
                             </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="PEq-e6-4qJ">
+                                <rect key="frame" x="250" y="175" width="100" height="100"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NEz-NU-8lI" appends="YES" id="pSx-zO-XqL"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="av6-hw-kcI" firstAttribute="width" secondItem="gAP-1N-Q3Z" secondAttribute="width" multiplier="0.5" id="98Y-py-2UM"/>
-                            <constraint firstItem="ash-hr-nsI" firstAttribute="top" secondItem="ztx-zr-yAz" secondAttribute="bottom" constant="8" id="ZKz-5T-bGu"/>
-                            <constraint firstItem="av6-hw-kcI" firstAttribute="centerX" secondItem="gAP-1N-Q3Z" secondAttribute="centerX" id="cI1-5f-7Sv"/>
+                            <constraint firstItem="ash-hr-nsI" firstAttribute="centerY" secondItem="gAP-1N-Q3Z" secondAttribute="centerY" multiplier="1.25" id="SEV-pH-hs5"/>
+                            <constraint firstItem="PEq-e6-4qJ" firstAttribute="centerY" secondItem="gAP-1N-Q3Z" secondAttribute="centerY" multiplier="0.75" id="SFv-1K-gqv"/>
                             <constraint firstItem="ash-hr-nsI" firstAttribute="centerX" secondItem="gAP-1N-Q3Z" secondAttribute="centerX" id="gDR-ZV-vKa"/>
-                            <constraint firstItem="av6-hw-kcI" firstAttribute="centerY" secondItem="gAP-1N-Q3Z" secondAttribute="centerY" multiplier="0.8" id="jjC-8f-cda"/>
-                            <constraint firstItem="ztx-zr-yAz" firstAttribute="top" secondItem="av6-hw-kcI" secondAttribute="bottom" constant="8" id="tM0-xw-gfb"/>
-                            <constraint firstItem="ztx-zr-yAz" firstAttribute="centerX" secondItem="gAP-1N-Q3Z" secondAttribute="centerX" id="zCd-yD-DXf"/>
+                            <constraint firstItem="PEq-e6-4qJ" firstAttribute="height" secondItem="ash-hr-nsI" secondAttribute="height" id="o5Y-sb-ULa"/>
+                            <constraint firstItem="PEq-e6-4qJ" firstAttribute="centerX" secondItem="gAP-1N-Q3Z" secondAttribute="centerX" id="rlp-I3-CRm"/>
+                            <constraint firstItem="PEq-e6-4qJ" firstAttribute="width" secondItem="ash-hr-nsI" secondAttribute="width" id="sAu-77-u6F"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="98Y-py-2UM"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="T2I-Ff-Pyg"/>
                     <connections>
-                        <outlet property="checkInBtn" destination="av6-hw-kcI" id="ifo-N8-W3A"/>
+                        <outlet property="cameraImageView" destination="PEq-e6-4qJ" id="WWo-9X-EIo"/>
                         <outlet property="chooseAlbumImageView" destination="ash-hr-nsI" id="ed7-il-UCm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TxS-Gh-UJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Jvx-aA-3SG">
                     <connections>
-                        <action selector="imageViewTapped:" destination="mcO-01-cK3" id="cYu-4q-AKh"/>
+                        <action selector="albumImageViewTapped:" destination="mcO-01-cK3" id="QWZ-hc-GEP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="NEz-NU-8lI">
+                    <connections>
+                        <action selector="cameraImageViewTapped:" destination="mcO-01-cK3" id="xR3-Zo-mTd"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -90,9 +79,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VaV-9q-L6S">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VaV-9q-L6S">
                                 <rect key="frame" x="0.0" y="64" width="600" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <connections>
@@ -101,10 +91,14 @@
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hbr-Ss-zQP">
                                 <rect key="frame" x="510" y="472" width="70" height="70"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Isv-bb-enq"/>
                                     <constraint firstAttribute="height" constant="70" id="Obk-av-pRt"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JHe-xK-ECs" appends="YES" id="RUj-ax-TyA"/>
+                                </connections>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3O-NX-nh4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
@@ -141,7 +135,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.87258683910000001" blue="0.72350248719999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.79215686269999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="nJe-9q-GC6" firstAttribute="leading" secondItem="v3O-NX-nh4" secondAttribute="leading" constant="8" id="1LW-rs-kuo"/>
                                     <constraint firstAttribute="bottom" secondItem="nJe-9q-GC6" secondAttribute="bottom" id="AKn-4d-afj"/>
@@ -218,9 +212,12 @@
                         <outlet property="addPostTextView" destination="VaV-9q-L6S" id="H04-QU-R7y"/>
                         <outlet property="doneButton" destination="C7D-8K-f4r" id="c5d-Wx-g4t"/>
                         <outlet property="postImageView" destination="Hbr-Ss-zQP" id="uOf-kS-YoA"/>
+                        <outlet property="postImageViewToBottomConstraint" destination="RWo-ry-LBE" id="jEY-lN-CSf"/>
+                        <outlet property="textViewtoBottomConstraint" destination="fw2-EY-lEp" id="HDH-7U-th1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0b8-Pc-lyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JHe-xK-ECs"/>
             </objects>
             <point key="canvasLocation" x="2088" y="505"/>
         </scene>
@@ -251,7 +248,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IGU-Tq-Dpu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.87258683910000001" blue="0.72350248719999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.79215686269999996" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -306,7 +303,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cSW-bq-D2Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.87258683910000001" blue="0.72350248719999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.792156862745098" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -320,6 +317,7 @@
     </scenes>
     <resources>
         <image name="Album" width="96" height="96"/>
+        <image name="Camera" width="96" height="96"/>
         <image name="Cancel" width="96" height="96"/>
         <image name="Check-in.png" width="25" height="25"/>
     </resources>
